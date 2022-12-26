@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableContainer from '@mui/material/TableContainer'
@@ -28,12 +28,15 @@ export function Board() {
   //   [3, 4, 5, 2, 8, 0, 0, 7, 9],
   // ]
   // const [board, setBoard] = useState(test)
-  const [board, setBoard] = useState(useSelector((state) => state.board.board))
+  const board = useSelector((state) => state.board.board)
+  // console.log(boardFromSlice, 'boardFromSlice')
+  // const [board, setBoard] = useState(boardFromSlice)
 
-  useEffect(() => {
-    console.log(board)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [board])
+  // useEffect(() => {
+  //   console.log(board)
+  //   setBoard(boardFromSlice)
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [boardFromSlice])
 
   return (
     <TableContainer component={Paper} style={{ justifyContent: 'center' }}>
@@ -49,7 +52,7 @@ export function Board() {
                     onChange={(e) => {
                       if (isValid(e.target.value)) {
                         board[rowIndex][cellIndex] = Number(e.target.value)
-                        setBoard([...board])
+                        // setBoard([...board])
                       } else {
                         //TODO -- display error char
                         dispatch(actionSnackBar.setSnackBar('error', `server_error`, 3000))

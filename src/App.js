@@ -8,9 +8,8 @@ import SnackBar from './components/SnackBar'
 function App() {
   return (
     <div className='App'>
+      <SnackBar />
       <header className='App-header'>
-        <SnackBar />
-
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Board />
         <BoardButtons />
