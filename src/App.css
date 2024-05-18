@@ -6,6 +6,7 @@
   height: 30vmin;
   pointer-events: none;
   border-radius: 40%;
+  margin-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

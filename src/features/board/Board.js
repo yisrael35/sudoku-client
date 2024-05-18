@@ -14,7 +14,7 @@ import { styled } from '@mui/system'
 const StyledTableContainer = styled(TableContainer)({
   justifyContent: 'center',
   margin: '20px auto',
-  maxWidth: '450px',
+  maxWidth: '550px',
 })
 
 const StyledTableCell = styled(TableCell)({
@@ -39,6 +39,7 @@ const StyledTextField = styled(TextField)({
   width: '100%',
   // height: '100%',
   textAlign: 'center',
+  backgroundColor: 'lightgrey',
   '& input': {
     textAlign: 'center',
     padding: 0,
