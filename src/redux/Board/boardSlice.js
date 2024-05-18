@@ -36,6 +36,10 @@ export const boardSlice = createSlice({
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
       ]
     },
+    updateCellInBoard: (state, action) => {
+      const { num, rowIndex, cellIndex } = action.payload
+      state.board[rowIndex][cellIndex] = num
+    },
   },
 })
 
@@ -103,6 +107,6 @@ export const setCleanBoard = () => async (dispatch) => {
   dispatch(cleanBoard())
 }
 
-export const { cleanBoard, updateBoard } = boardSlice.actions
+export const { cleanBoard, updateBoard, updateCellInBoard } = boardSlice.actions
 
 export default boardSlice.reducer
