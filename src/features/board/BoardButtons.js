@@ -18,7 +18,7 @@ export function BoardButtons() {
 
   return (
     <div>
-      <Stack direction='row' alignItems='center' spacing={2}>
+      <Stack direction='column' alignItems='center' spacing={2}>
         <Button variant='outlined' onClick={() => dispatch(cleanBoard())}>
           {dictionary['clean']}
         </Button>
@@ -39,4 +39,3 @@ export function BoardButtons() {
     </div>
   )
 }
-
